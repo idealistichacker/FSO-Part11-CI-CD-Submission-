@@ -1,0 +1,13 @@
+name: Hello World             # 这里的名字会显示在 Actions 界面上
+
+on:
+  push:                       # 触发条件：当你执行 git push 时
+    branches:
+      - main                  # 只有推送到 main 分支才会触发（根据你的主分支名调整）
+
+jobs:
+  hello_world_job:            # 任务的 ID
+    runs-on: ubuntu-latest    # 告诉 GitHub：给我找一台装了最新 Ubuntu 的虚拟机！
+    steps:
+      - name: Say Hello       # 步骤的名字
+        run: echo "Hello World!" # 核心指令：在控制台打印这行字
