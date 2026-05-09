@@ -11,3 +11,15 @@ jobs:
     steps:
       - name: Say Hello       # 步骤的名字
         run: echo "Hello World!" # 核心指令：在控制台打印这行字
+  date_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Date
+        run: date             # 打印当前日期和时间
+  ls_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run ls -l
+        run: ls -l            # 列出当前目录下的所有文件
+
+    
