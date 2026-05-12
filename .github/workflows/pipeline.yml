@@ -35,3 +35,10 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+
+      - name: Build for Render
+        run:  npm run build
+
+      - name: Deploy to Render
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }} # 仅主分支推送时部署
+        run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
