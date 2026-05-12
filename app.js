@@ -5,7 +5,7 @@ app.use(express.static('dist'))
 
 // --- 在这里添加测试接口 ---
 app.get('/version', (req, res) => {
-  res.send('Exercise:12. Health check --- Render Health Check is ok --- finish Exercise12 v3.0') // 当你下次想测试部署是否生效时，把这里改成 '2'
+  res.send('Exercise: 13. Pull request ---  Update pipeline to support pull requests --- v2.0') // 当你下次想测试部署是否生效时，把这里改成 '2'
 })
 //防止“坏代码”上线导致服务崩溃。
 app.get('/health', (req, res) => {
