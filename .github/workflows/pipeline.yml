@@ -1,9 +1,12 @@
 name: Exercise5 v1.0             # 这里的名字会显示在 Actions 界面上
 
 on:
-  push:                       # 触发条件：当你执行 git push 时
+  push:
     branches:
-      - main      
+      - main
+  pull_request:    # 新增：当有针对 main 分支的 PR 时触发
+    branches: [main]
+    types: [opened, synchronize]  
 
 jobs:
   simple_deployment_pipeline:
